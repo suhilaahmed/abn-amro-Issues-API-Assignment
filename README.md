@@ -14,7 +14,6 @@ In your local working directory:
 ```
 npm install
 ```
-
 ### Create an .env file in your local working directory
 The .env file should contain the following paramters:
 ```
