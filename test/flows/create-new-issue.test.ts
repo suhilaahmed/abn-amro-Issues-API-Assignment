@@ -40,6 +40,7 @@ describe("Add a new issue to a project - Happy Flows", () => {
     author.username = gitlabUserName;
     author.name = gitlabName;
     author.web_url = `${gitlabURL}/${gitlabUserName}`;
+    author.avatar_url = issues[0].author.avatar_url;
   });
 
   // Delete the created issue as a cleanup setp
