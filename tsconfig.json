@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017", "dom"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "declaration": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "baseUrl": "."
+  },
+  "include": ["test"],
+  "exclude": ["node_modules/**/*"]
+}
