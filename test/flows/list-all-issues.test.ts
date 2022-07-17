@@ -41,7 +41,7 @@ describe("List all issues - Happy Flows", () => {
   });
 
   // gitlab issue: getting all issues available is resulting in 500 error
-  test.skip("Get list of all available issues ", async (): Promise<void> => {
+  test("Get list of all available issues ", async (): Promise<void> => {
     await expect(async () => {
       await api.issue.listAllIssues("scope", "all");
     }).rejects.toThrowError();
