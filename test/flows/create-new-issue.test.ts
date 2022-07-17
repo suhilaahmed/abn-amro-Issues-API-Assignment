@@ -31,6 +31,7 @@ let createdIssueId: number;
 /*
  * Module
  */
+// This suite is intended to create a new issue under a project with the required paramters
 describe("Add a new issue to a project - Happy Flows", () => {
   beforeAll(async () => {
     const issues = await api.issue.listAllIssuesToUser();

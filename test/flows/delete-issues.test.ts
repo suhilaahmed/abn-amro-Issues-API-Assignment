@@ -25,6 +25,8 @@ let issueInternalId: number;
 /*
  * Module
  */
+
+// A straight forward set of test cases to delete an issue that belong to a project.
 describe("Delete an issue that belong to a specific project - Happy Flows", () => {
   beforeAll(async () => {
     const issues = await api.issue.addNewIssueToProject(
@@ -46,6 +48,7 @@ describe("Delete an issue that belong to a specific project - Happy Flows", () =
   });
 });
 
+// Making sure that when passing incorrect project id or issue id the issue is not deleted
 describe("Delete an issue that belong to a specific project - Unhappy Flows", () => {
   test("Delete an issue using invalid internal issue Id ", async (): Promise<void> => {
     const randomIssueId =

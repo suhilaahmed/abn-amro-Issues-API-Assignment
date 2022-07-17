@@ -160,6 +160,8 @@ describe("List all issues - Unhappy Flows", () => {
   });
 });
 
+// In this test suite we will test the flows of getting a singe issue by id 
+
 describe("List a single issue - Happy/Unhappy Flows", () => {
   test("Get issue with correct id", async (): Promise<void> => {
     for (const issueId of issuesIds) {
@@ -192,6 +194,8 @@ describe("List a single issue - Happy/Unhappy Flows", () => {
     }).rejects.toThrowError(`Unable to find issue with id:  ${randomIssueId}`);
   });
 });
+
+// In this test suite we will test the flows of getting list of available issues under a specific project
 
 describe("List project issues - Happy/Unhappy Flows", () => {
   test("List issues under a correct project id", async (): Promise<void> => {

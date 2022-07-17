@@ -39,10 +39,12 @@ describe("Update an existing project issue - Happy Flows", () => {
     createdIssueId = issue.iid;
   });
 
+// Delete the created issue as a cleanup setp
   afterAll(async () => {
     await api.issue.deleteIssueFromProject(projectId, createdIssueId);
   });
 
+  //This test is created to mark the issue as closed and to assert on that
   test("Update Issue - mark a issue that belong to a project to be closed", async (): Promise<void> => {
     expect(issue.state).toEqual("opened");
 
@@ -55,6 +57,7 @@ describe("Update an existing project issue - Happy Flows", () => {
     expect(updateIssue.state).toEqual("closed");
   });
 
+//This test is created to mark the issue as confidential and to assert on that
   test("Update Issue - mark a issue that belong to a project to be confidential", async (): Promise<void> => {
     expect(issue.confidential).toEqual(false);
 
@@ -68,6 +71,7 @@ describe("Update an existing project issue - Happy Flows", () => {
   });
 });
 
+// This test suite mainly target providing incorrect values and missing the private token
 describe("Update an existing project issue - Unhappy Flows", () => {
   beforeAll(async () => {
     issue = await api.issue.addNewIssueToProject(
